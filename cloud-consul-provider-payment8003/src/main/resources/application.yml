@@ -1,0 +1,19 @@
+###consul服务端口号
+server:
+  port: 8003
+
+spring:
+  application:
+    name: consul-provider-payment-8003  #微服务名称
+####consul注册中心地址
+  cloud:
+    consul:
+      host: localhost   #注册consul服务的主机
+      port: 8500   #注册consul服务的端口号
+      discovery:
+        #hostname: 127.0.0.1
+        service-name: ${spring.application.name}  #指定注册的服务名称 默认就是应用名
+        register-health-check: false #关闭consu了服务的健康检查[不推荐]
+
+
+
