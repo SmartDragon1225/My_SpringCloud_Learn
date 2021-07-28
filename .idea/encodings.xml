@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/cloud-consul-consume-80/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-consul-consume-80/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-consul-payment8002/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-consul-provider-payment-8004/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-consul-provider-payment-8004/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-consul-provider-payment8003/src/main/java" charset="UTF-8" />

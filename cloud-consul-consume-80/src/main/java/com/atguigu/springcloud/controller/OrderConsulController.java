@@ -17,13 +17,19 @@ import javax.annotation.Resource;
 public class OrderConsulController
 {
     public static final String INVOKE_URL = "http://consul-provider-payment";
+    public static final String INVOKE_URL1 = "http://consul-provider-payment";
 
     @Resource
     private RestTemplate restTemplate;
 
     @GetMapping(value = "/consumer/payment/consul")
-    public String paymentInfo()
-    {
+    public String paymentInfo() {
+        String result = restTemplate.getForObject(INVOKE_URL+"/payment/consul",String.class);
+        return result;
+    }
+
+    @GetMapping("")
+    public String list(){
         String result = restTemplate.getForObject(INVOKE_URL+"/payment/consul",String.class);
         return result;
     }

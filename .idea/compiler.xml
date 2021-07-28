@@ -13,9 +13,15 @@
         <module name="cloud-payment-8001" />
         <module name="cloud-consul-provider-payment8003" />
         <module name="cloud-eureka-server7001" />
+        <module name="cloud-consul-payment8002" />
         <module name="cloud-eureka-server7002" />
         <module name="cloud-consul-consume-80" />
       </profile>
     </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="cloud-consul-payment8002" options="-parameters" />
+    </option>
   </component>
 </project>
