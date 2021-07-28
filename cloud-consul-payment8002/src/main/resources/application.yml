@@ -1,0 +1,32 @@
+#spring:
+#  thymeleaf:
+#    cache: false
+#  messages:
+#    basename: i18n.login
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    username: root
+#    password: Wl123456
+#    url: jdbc:mysql://127.0.0.1:3306/mybatis_plus?useUnicode=true&characterEncoding=UTF-8&useSSL=true&serverTimezone=UTC
+
+###consul服务端口号
+server:
+  port: 8002
+
+spring:
+  thymeleaf:
+    cache: false
+  messages:
+    basename: i18n.login
+  application:
+    name: consul-provider-payment-8002  #微服务名称
+  ####consul注册中心地址
+  cloud:
+    consul:
+      host: localhost   #注册consul服务的主机
+      port: 8500   #注册consul服务的端口号
+      discovery:
+        #hostname: 127.0.0.1
+        service-name: ${spring.application.name}  #指定注册的服务名称 默认就是应用名
+        register-health-check: false #关闭consu了服务的健康检查[不推荐]
+
